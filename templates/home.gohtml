@@ -1,0 +1,18 @@
+{{template "header" .}}
+
+{{define "title"}}Login{{end}}
+
+{{if .IsAuthenticated}}
+<h1 class="text-center"Welcome back, <span>{{.Profile.name}}</span>!</h1>
+<div class="d-flex justify-content-center"></div>
+<div class="row">
+<div class="col-lg-12">
+  <h3>Latest Products</h3>
+</div>
+</div>
+
+{{else}}
+<h2> Must Authenticate First! </h2>
+{{end}}
+
+{{template "footer"}}
